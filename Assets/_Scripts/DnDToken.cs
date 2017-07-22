@@ -97,7 +97,8 @@ public class DnDToken : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("Clicked");
-        outliner.eraseRenderer = !outliner.eraseRenderer;  
+        outliner.eraseRenderer = !outliner.eraseRenderer;
+        ShowView(true);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -32,3 +32,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/DnD Tools/Library
+/DnD Tools/Assets/_Scripts/*.meta

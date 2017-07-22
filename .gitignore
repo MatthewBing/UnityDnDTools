@@ -33,3 +33,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 /DnD Tools/Library
+/DnD Tools/Assets/_Scenes/GScene.unity.meta

@@ -44,7 +44,18 @@ public class LoSCalculator : MonoBehaviour {
         //right
 
         //far
-        return 0;
+        switch (casthits) {
+            case 5:
+                return 0;
+            case 1:
+            case 2:
+                return .75f;
+            case 3:
+            case 4:
+                return .5f;
+            default:
+                return 1;
+        }
     }
 
     void Start() {

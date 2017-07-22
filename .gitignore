@@ -34,3 +34,4 @@ sysinfo.txt
 *.unitypackage
 /DnD Tools/Library
 /DnD Tools/Assets/_Scripts/*.meta
+Library

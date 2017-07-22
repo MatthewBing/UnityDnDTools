@@ -14,7 +14,9 @@ namespace Assets.Interfaces
         int Level { get; set; }
         String name { get; set; }
         String tag { get; set; }
+        
 
         void takeDamage(ICharacter other);
+        
     }
 }

@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 namespace Assets.Interfaces
 {
-    public interface IMap
+    public interface IMap : IEnumerable<ITile>
     {
-        bool canUnitPassTile(int x, int y, ICharacter character);
+        int canUnitPassTile(int x, int y, ICharacter character, int movesLeftInTurn);
     }
 }

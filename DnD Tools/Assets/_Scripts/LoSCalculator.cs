@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoSCalculator : MonoBehaviour {
     public GameObject A;
     public GameObject B;
+    public LayerMask layermask;
 
     private Vector3 CalculateClosestCorner(Transform caster, Transform target) {
         Vector3 temp = new Vector3();
@@ -28,21 +29,25 @@ public class LoSCalculator : MonoBehaviour {
         return temp;
     }
 
-    public bool CalculateLineofSight(Transform caster, Transform target) {
+    public float CalculateCoverandLoS(Transform caster, Transform target) {
         Vector3 castOrigin;
+        int casthits = 0;
         castOrigin = CalculateClosestCorner(caster, target);
+        //centercast
+        if (Physics.Raycast(castOrigin, target.position, layermask)) {
+            casthits++;
+        }
+        //close
+        //if (Physics.Raycast(castOrigin,)
+        //left
 
-        return false;
-    }
+        //right
 
-    public float CalculateCover(Transform a, Transform target) {
-        Vector3 castOrigin;
-        castOrigin = CalculateClosestCorner(a, target);
-
-        return 1;
+        //far
+        return 0;
     }
 
     void Start() {
-        //CalculateLineofSight(A.transform, B.transform);
+        //CalculateCoverandLoS(A.transform, B.transform);
     }
 }

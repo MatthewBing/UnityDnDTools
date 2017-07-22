@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using UnityEngine;
 
 namespace Assets.Classes
 {
     class GridMap : IMap
     {
-        Dictionary<int, Dictionary<int, ITile>> tiles = new Dictionary<int, Dictionary<int, ITile>>();
+        ITile[,] tiles;
 
         class TileInternal : ITile
         {
@@ -29,6 +30,13 @@ namespace Assets.Classes
                 get;
                 set;
             }
+
+            public Texture texture
+            {
+                get;
+                set;
+            }
+
             public TileInternal(int x, int y, int height)
             {
                 this.X = x;
@@ -39,21 +47,41 @@ namespace Assets.Classes
         
         public GridMap(int sizeX, int sizeY)
         {
+            tiles = new ITile[sizeX,sizeY];
             for (int i = 0; i < sizeX; i++)
             {
-                var dict = new Dictionary<int, ITile>();
                 for (int j = 0; i < sizeY; j++)
                 {
-                    dict.Add(j, new TileInternal(i, j, 4));
+                    tiles[i, j] = new TileInternal(i, j, 0);
                 }
-                tiles.Add(i, dict);
             }
         }
 
-        public bool canUnitPassTile(int x, int y, ICharacter character)
+        public int canUnitPassTile(int x, int y, ICharacter character, int movesLeftInTurn)
         {
-            return tiles[x][y].Height > character.ClimbingFactor;
+            if (tiles[x, y].Height >= 0)
+            {
+                return movesLeftInTurn - (tiles[x, y].Height - character.ClimbingFactor);
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public IEnumerator<ITile> GetEnumerator()
+        {
+            for (int i = 0; i < tiles.GetLength(0); i++)
+            {
+                for (int j = 0; i < tiles.GetLength(1); j++)
+                {
+                    yield return tiles[i, j];
+                }
+            }
         }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }

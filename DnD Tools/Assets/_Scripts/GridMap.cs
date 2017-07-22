@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using UnityEngine;
 
 namespace Assets.Classes
 {
@@ -29,6 +30,13 @@ namespace Assets.Classes
                 get;
                 set;
             }
+
+            public Texture texture
+            {
+                get;
+                set;
+            }
+
             public TileInternal(int x, int y, int height)
             {
                 this.X = x;

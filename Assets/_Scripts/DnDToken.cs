@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DndTools.Interfaces;
+using Assets.Interfaces;
 using UnityEngine.EventSystems;
 using System;
 using cakeslice;

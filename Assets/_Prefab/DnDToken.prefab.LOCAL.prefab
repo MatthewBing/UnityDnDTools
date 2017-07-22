@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 114273150509465366}
   - component: {fileID: 114140383452370552}
   m_Layer: 0
-  m_Name: DnDToken
+  m_Name: DnDToken.prefab.LOCAL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

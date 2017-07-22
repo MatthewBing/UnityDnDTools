@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 114273150509465366}
   - component: {fileID: 114140383452370552}
   m_Layer: 0
-  m_Name: DnDToken
+  m_Name: DnDToken.prefab.REMOTE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -564,7 +564,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114154157690616616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -789,7 +788,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114384965409834686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -916,7 +914,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114477846719411560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -935,7 +932,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114487827038363602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1192,7 +1188,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114662709332278650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1269,7 +1264,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114733616919836288
 MonoBehaviour:
   m_ObjectHideFlags: 1

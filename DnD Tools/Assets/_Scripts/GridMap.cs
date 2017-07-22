@@ -49,11 +49,17 @@ namespace Assets.Classes
             }
         }
 
-        public bool canUnitPassTile(int x, int y, ICharacter character)
+        public int canUnitPassTile(int x, int y, ICharacter character, int movesLeftInTurn)
         {
-            return tiles[x,y].Height > character.ClimbingFactor;
+            if (tiles[x, y].Height >= 0)
+            {
+                return movesLeftInTurn - (tiles[x, y].Height - character.ClimbingFactor);
+            }
+            else
+            {
+                return -1;
+            }
         }
-
         public IEnumerator<ITile> GetEnumerator()
         {
             for (int i = 0; i < tiles.GetLength(0); i++)

@@ -5,6 +5,6 @@ namespace Assets.Interfaces
 {
     public interface IMap : IEnumerable<ITile>
     {
-        bool canUnitPassTile(int x, int y, ICharacter character);
+        int canUnitPassTile(int x, int y, ICharacter character, int movesLeftInTurn);
     }
 }

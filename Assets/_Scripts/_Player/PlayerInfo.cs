@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
+
+
+
+
     public enum Races
     {
         Dwarf,
@@ -246,11 +250,15 @@ public class PlayerInfo : MonoBehaviour
         else
             return "Female";
     }
+    
+}//End PlayerInfo Class
 
-}
+
 
 public class Player
 {
+    //Declare various Variables pertaining to Player details
+    public int intExperience { get; set; }
     public PlayerInfo.Races race;
     public string gender;
     public PlayerInfo.Classes Pclass;
@@ -267,4 +275,25 @@ public class Player
     public int INT;
     public int WIS;
     public int CHA;
-}
+    public Spellbook splbkMyBook;
+
+    //Declare Maximum Allowed Spell Counts for each Spell level
+    public int intCantripMax { get; set; }
+    public int intL1SpellMax { get; set; }
+    public int intL2SpellMax { get; set; }
+    public int intL3SpellMax { get; set; }
+    public int intL4SpellMax { get; set; }
+    public int intL5SpellMax { get; set; }
+
+    public void ChangeMaxSpellCounts(int intCantrip = 0, int intL1 = 0, int intL2 = 0, int intL3 = 0, int intL4 = 0, int intL5 = 0)
+    {
+        intCantripMax += intCantrip;
+        intL1SpellMax += intL1;
+        intL2SpellMax += intL2;
+        intL3SpellMax += intL3;
+        intL4SpellMax += intL4;
+        intL5SpellMax += intL5;
+    }//End ChangeMaxSpellCounts Method
+
+
+}//End Player Class

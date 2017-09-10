@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GridCreator : MonoBehaviour {
-    public GameObject gamoGridCube;
+    public GameObject gameGridCube;
     public int intLength, intWidth;
     public float floHillClustering, floHillHeight;
     public Transform tformStartPos;
@@ -33,7 +33,7 @@ public class GridCreator : MonoBehaviour {
                 floNewHeight = floPx * floHillHeight * floPy;
                 v3NewPos = new Vector3(z - 10, floNewHeight, x - 10);
 
-                gamoNewObj = Instantiate(gamoGridCube, tformStartPos);
+                gamoNewObj = Instantiate(gameGridCube, tformStartPos);
                 gamoNewObj.transform.position = v3NewPos;
                 gamoNewObj.transform.localScale = new Vector3(1f, 5f, 1f);
             }//End y For Loop
